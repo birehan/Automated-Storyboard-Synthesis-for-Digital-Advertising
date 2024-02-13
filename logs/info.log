@@ -1,1 +1,21 @@
 2024-02-13 17:58:16,958:logger:Image generated successfully
+2024-02-13 19:13:14,496:logger:An unexpected error occurred while extracting text from image: OpenCV(4.9.0) /io/opencv/modules/imgproc/src/color.cpp:196: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+2024-02-13 19:13:59,200:logger:An unexpected error occurred while extracting text from image: OpenCV(4.9.0) /io/opencv/modules/imgproc/src/color.cpp:196: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+2024-02-13 19:14:00,674:logger:An unexpected error occurred while extracting text from image: OpenCV(4.9.0) /io/opencv/modules/imgproc/src/color.cpp:196: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+2024-02-13 19:14:59,394:logger:An unexpected error occurred while extracting text from image: OpenCV(4.9.0) /io/opencv/modules/imgproc/src/color.cpp:196: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+2024-02-13 19:15:15,386:logger:Text extracted from image successfully
+2024-02-13 19:16:08,889:logger:Dominant colors determined successfully
+2024-02-13 19:16:08,892:logger:Dominant colors extracted from image successfully
+2024-02-13 19:18:17,645:logger:Text extracted from image successfully
+2024-02-13 19:19:13,635:logger:Dominant colors determined successfully
+2024-02-13 19:19:13,650:logger:Dominant colors extracted from image successfully
+2024-02-13 19:19:37,323:logger:An unexpected error occurred while plotting dominant colors: RGBA values should be within 0-1 range
+2024-02-13 19:21:51,219:logger:Text extracted from image successfully
+2024-02-13 19:22:22,675:logger:Dominant colors determined successfully
+2024-02-13 19:22:22,678:logger:Dominant colors extracted from image successfully
+2024-02-13 19:22:42,183:logger:An unexpected error occurred while plotting dominant colors: unsupported operand type(s) for /: 'tuple' and 'int'
+2024-02-13 19:22:50,845:logger:An unexpected error occurred while plotting dominant colors: unsupported operand type(s) for /: 'tuple' and 'int'
