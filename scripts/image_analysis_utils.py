@@ -9,6 +9,31 @@ from typing import List, Tuple
 import matplotlib.pyplot as plt
 import numpy as np
 
+
+def get_image_dimensions(image_path: str) -> tuple:
+    """
+    Get the width and height of an image.
+
+    Args:
+    - image_path (str): The path to the image file.
+
+    Returns:
+    - tuple: A tuple containing the width and height of the image.
+    """
+    try:
+        # Load the image using OpenCV
+        image = cv2.imread(image_path)
+        if image is None:
+            raise ValueError(f"Unable to load image from {image_path}")
+
+        # Retrieve the dimensions of the image
+        height, width, _ = image.shape
+        logger.info(f"Image dimensions retrieved successfully for {image_path}")
+        return width, height
+    except Exception as e:
+        logger.error(f"An error occurred while getting image dimensions: {e}")
+        return None, None
+
 def extract_text_on_image(image_location: str) -> List[str]:
     """
     Extract text written on images using OCR (Optical Character Recognition).
