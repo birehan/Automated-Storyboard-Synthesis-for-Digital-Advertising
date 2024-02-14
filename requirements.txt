@@ -7,3 +7,7 @@ python-dotenv==1.0.1
 requests==2.31.0
 webcolors==1.13
 pytesseract==0.3.10
+gluoncv==0.10.5.post0
+numpy==1.23.1
+torch==1.4.0
+mxnet==1.9.1
