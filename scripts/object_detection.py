@@ -54,10 +54,9 @@ class ObjectDetection:
             i = 0
             while(cap.isOpened()):
                 ret, frame = cap.read()
-                if ret == False:
+                if ret is False:
                     break
-                ps = (frame>0).sum()
-                tp = frame.shape[0]*frame.shape[1]
+              
                 cv2.imwrite('frame'+str(i)+'.jpg', frame)
                 x, img = data.transforms.presets.yolo.load_test('frame'+str(i)+'.jpg', short=512)
                 class_IDs, scores, bounding_boxs = self.net(x)
@@ -90,7 +89,7 @@ class ObjectDetection:
             bounding_boxs: Bounding boxes of detected objects.
         """
         try:
-            ax = utils.viz.plot_bbox(img, bounding_boxs[0], scores[0],
+            utils.viz.plot_bbox(img, bounding_boxs[0], scores[0],
                                 class_IDs[0], class_names=self.net.classes)
             plt.show() 
             logger.info("Object detection plot generated successfully")
