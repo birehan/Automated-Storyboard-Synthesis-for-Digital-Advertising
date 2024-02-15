@@ -11,3 +11,5 @@ gluoncv==0.10.5.post0
 numpy==1.23.1
 torch==1.4.0
 mxnet==1.9.1
+transformers==4.37.2
+replicate==replicate
