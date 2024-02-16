@@ -38,3 +38,55 @@
 2024-02-15 17:07:05,263:logger:Image saved to ../generated_assets/storyboard_1/frame_1/background_image_2.png
 2024-02-15 17:25:15,484:logger:Image saved to ../generated_assets/storyboard_1/frame_1/background_image_3.png
 2024-02-16 14:46:00,972:logger:Image saved to ../generated_assets/storyboard_1/frame_1/background_image_4.png
+2024-02-16 14:57:13,619:logger:Text extracted from image successfully
+2024-02-16 14:57:54,698:logger:Text extracted from image successfully
+2024-02-16 15:00:09,777:logger:Dominant colors determined successfully
+2024-02-16 15:00:09,781:logger:Dominant colors extracted from image successfully
+2024-02-16 15:02:07,910:logger:Background removed from image '../data/Challenge_Data/Assets/0a22f881b77f00220f2034c21a18b854/_preview.png'. Result saved to '../data/Challenge_Data/Assets/0a22f881b77f00220f2034c21a18b854/_preview_nobg.png'.
+2024-02-16 15:06:31,305:logger:Background removed from image '../data/Challenge_Data/Assets/0a18978cdc8b64f900b0db6a297eb99d/_preview.png'. Result saved to '.../data/Challenge_Data/Assets/0a18978cdc8b64f900b0db6a297eb99d/_preview_nobg.png'.
+2024-02-16 15:07:18,104:logger:Background removed from image '../data/Challenge_Data/Assets/0a18978cdc8b64f900b0db6a297eb99d/_preview.png'. Result saved to '.../data/Challenge_Data/Assets/0a18978cdc8b64f900b0db6a297eb99d/_preview_nobg.png'.
+2024-02-16 15:07:55,315:logger:Background removed from image '../data/Challenge_Data/Assets/0a18978cdc8b64f900b0db6a297eb99d/_preview.png'. Result saved to '.../data/Challenge_Data/Assets/0a18978cdc8b64f900b0db6a297eb99d/_preview_nobg.png'.
+2024-02-16 15:08:27,734:logger:Background removed from image '../data/Challenge_Data/Assets/0a18978cdc8b64f900b0db6a297eb99d/_preview.png'. Result saved to '/home/babi/Desktop/output.png'.
+2024-02-16 15:45:45,535:logger:Text extracted from image successfully
+2024-02-16 15:46:32,093:logger:An unexpected error occurred: module 'PIL.Image' has no attribute 'ANTIALIAS'
+2024-02-16 15:52:11,978:logger:Image dimensions retrieved successfully for /home/babi/Desktop/ikram.png
+2024-02-16 16:02:56,313:logger:Object detection model created
+2024-02-16 16:02:58,563:logger:Object detected from image successfully
+2024-02-16 16:03:03,997:logger:Object detection plot generated successfully
+2024-02-16 16:04:13,285:logger:Object detected from image successfully
+2024-02-16 16:05:19,527:logger:Object detected from image successfully
+2024-02-16 16:05:22,034:logger:Object detection plot generated successfully
+2024-02-16 16:15:37,660:logger:Object detection model created
+2024-02-16 16:16:01,190:logger:Object detected from image successfully
+2024-02-16 16:16:01,196:logger:Error while detecting objects and info: int() argument must be a string, a bytes-like object or a number, not 'NDArray'
+2024-02-16 16:17:59,882:logger:Object detection model created
+2024-02-16 16:18:03,021:logger:Object detected from image successfully
+2024-02-16 16:18:08,623:logger:Object detection plot generated successfully
+2024-02-16 16:18:12,994:logger:Object detected from image successfully
+2024-02-16 16:18:14,587:logger:Error while detecting objects and info: int() argument must be a string, a bytes-like object or a number, not 'NDArray'
+2024-02-16 16:20:31,553:logger:Object detection model created
+2024-02-16 16:20:38,648:logger:Object detected from image successfully
+2024-02-16 16:20:38,652:logger:Error while detecting objects and info: int() argument must be a string, a bytes-like object or a number, not 'NDArray'
+2024-02-16 16:22:51,929:logger:Object detection model created
+2024-02-16 16:23:00,373:logger:Object detected from image successfully
+2024-02-16 16:23:00,376:logger:Error while detecting objects and info: int() argument must be a string, a bytes-like object or a number, not 'NDArray'
+2024-02-16 16:28:53,505:logger:Object detection model created
+2024-02-16 16:28:57,046:logger:Object detected from image successfully
+2024-02-16 16:29:08,913:logger:Object detected from image successfully
+2024-02-16 16:37:07,254:logger:Object detection model created
+2024-02-16 16:37:14,038:logger:Object detected from image successfully
+2024-02-16 16:37:16,009:logger:Error while detecting objects and info: index 1 is out of bounds for axis 0 with size 1
+2024-02-16 16:39:21,139:logger:Object detection model created
+2024-02-16 16:39:25,292:logger:Object detected from image successfully
+2024-02-16 16:41:38,821:logger:Object detection model created
+2024-02-16 16:42:03,476:logger:Object detected from image successfully
+2024-02-16 16:42:18,073:logger:Object detected from image successfully
+2024-02-16 16:42:20,071:logger:Object detection plot generated successfully
+2024-02-16 16:48:40,734:logger:Object detection model created
+2024-02-16 16:49:06,080:logger:Object detected from image successfully
+2024-02-16 17:10:46,290:logger:An unexpected error occurred: 'str' object has no attribute 'read'
+2024-02-16 17:11:13,948:logger:Image combined success
+2024-02-16 17:12:37,729:logger:Background removed from image '../data/Challenge_Data/Assets/0a18978cdc8b64f900b0db6a297eb99d/_preview.png'. Result saved to '/home/babi/Desktop/output.png'.
+2024-02-16 17:14:24,949:logger:Background removed from image '../data/Challenge_Data/Assets/0a18978cdc8b64f900b0db6a297eb99d/_preview.png'. Result saved to '/home/babi/Desktop/output.png'.
+2024-02-16 17:15:01,787:logger:Image combined success
+2024-02-16 17:15:40,103:logger:Image combined success

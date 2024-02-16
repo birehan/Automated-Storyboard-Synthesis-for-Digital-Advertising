@@ -36,6 +36,56 @@ class ObjectDetection:
             logger.error(f"Error while detecting objects from image: {e}")
             return (), (), (), None
     
+    def detect_objects_and_info(self, image_path: str) -> list:
+        """
+        Detect objects in an image and return information about each detected object.
+
+        Args:
+            image_path (str): Path to the image file.
+
+        Returns:
+            list: List of dictionaries containing information about each detected object.
+        """
+        try:
+            class_IDs, scores, bounding_boxes, img = self.detect_from_image(image_path)
+            # print(class_IDs, scores, bounding_boxes, img )
+            if img is None:
+                return []
+
+            # Process detected objects
+            detected_objects = []
+            index = 0
+            for class_id, score, bbox in zip(class_IDs[0], scores[0], bounding_boxes[0]):
+
+                cid = int(class_id[0][0].asnumpy())
+                class_name = self.net.classes[cid]
+
+                score = float(score.asscalar())
+
+                x_min, y_min, x_max, y_max = [int(coord.asscalar()) for coord in bbox]
+
+
+                # Calculate width, height, and starting position
+                width = x_max - x_min
+                height = y_max - y_min
+                starting_position = (x_min, y_min)
+
+                # Add information to the list
+                if score > 0.5:
+                    detected_objects.append({
+                        "class_name": class_name,
+                        "width": width,
+                        "height": height,
+                        "starting_position": starting_position
+                    })
+
+                index += 1
+
+            return detected_objects
+        except Exception as e:
+            logger.error(f"Error while detecting objects and info: {e}")
+            return []
+    
     def detect_from_video(self, video_path: str) -> dict:
         """
         Perform object detection on a video.

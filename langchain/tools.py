@@ -1,17 +1,70 @@
 from langchain.agents import tool
 from pydantic import BaseModel, Field
 from typing import List
+from scripts.image_generator_fooocus import generate_image_fooocus
+from scripts.image_analysis_utils import remove_background, resize_image
 
 class SQLQuery(BaseModel):
     query: str = Field(description="SQL query to execute")
 
 @tool
-def dummy_tool(query: str) -> List:
-    """Returns dummy tool"""
-    return query
+def generate_image(prompt: str, image_name: str) -> str:
+    """
+    Generates an image based on the provided prompt using the 'generate_image_fooocus' tool.
+
+    Args:
+        prompt (str): The text prompt used for generating the image.
+        image_name (str): The desired name for the generated image.
+
+    Returns:
+        str: The local file path to the saved image.
+
+    Example:
+        generate_image("A serene landscape with mountains and a lake.", "background_image")
+
+    """
+    try:
+        return generate_image_fooocus(prompt, image_name)
+    except Exception as e:
+        print(f"Error while generating image: {e}")
+        return ""
+
+@tool
+def remove_image_background(image_path: str, output_path: str) -> str:
+    """
+    Removes the background from the image located at 'image_path' and saves the result to 'output_path'.
+
+    Args:
+        image_path (str): The file path to the input image.
+        output_path (str): The file path where the background-removed image will be saved.
+
+    Returns:
+        str: The file path to the saved background-removed image at 'output_path'.
+
+    """
+    try:
+        return remove_background(image_path, output_path)
+    except Exception as e:
+        print(f"Error while removing image background: {e}")
+        return ""
+    
+    
+@tool
+def change_image_size(image_path: str, output_path: str, target_width:str, target_height:str) -> str:
+    """
+    """
+    try:
+        return resize_image(image_path, target_width, target_height, output_path)
+    except Exception as e:
+        print(f"Error while removing image background: {e}")
+        return ""
+    
 
 
+        
 
+
+# remove_background
 # @tool
 # def generate_evaluation_data(query: str) -> List:
 #     """Returns geneated evaluation data"""
