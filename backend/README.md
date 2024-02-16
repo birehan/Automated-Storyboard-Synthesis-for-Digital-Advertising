@@ -1,61 +1,48 @@
-# PromptlyTech-RAG-LLM-Prompt-Service backend 
+# Automated Storyboard Synthesis for Digital Advertising - Backend
 
-Certainly! Below is a template for a README file for a Flask backend for the "PromptlyTech-RAG-LLM-Prompt-Service" project. Please make sure to replace placeholder information with your actual project details.
+## Overview
 
----
+Welcome to the backend of our cutting-edge machine learning solution developed as part of the 10 Academy Cohort A Weekly Challenge: Week 10. This backend system serves as the core engine behind our automated storyboard synthesis, providing APIs for processing textual descriptions of advertisement concepts and assets and generating visually compelling storyboards.
 
-# PromptlyTech-RAG-LLM-Prompt-Service Backend
+## Features
 
-This repository contains the Flask backend for the "PromptlyTech-RAG-LLM-Prompt-Service" project. This backend is responsible for handling requests and managing the business logic associated with the prompt service.
+- **RESTful API**: Exposes endpoints for receiving textual inputs and serving generated storyboards.
+- **Text Processing**: Utilizes natural language processing techniques to analyze and interpret advertisement descriptions.
+- **Model Integration**: Incorporates machine learning models for synthesizing storyboards from textual inputs.
+- **Scalability**: Designed to scale horizontally to handle a large number of concurrent requests.
 
-## Table of Contents
+## Technologies Used
 
-- [Introduction](#introduction)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Configuration](#configuration)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Introduction
-
-Describe the purpose and functionality of the backend. Include any relevant background information about the project.
+- **Flask**: Framework for building the backend server and RESTful APIs.
+- **Python**: Programming language used for backend development.
+- **Machine Learning Libraries**: Libraries such as TensorFlow, PyTorch, or scikit-learn for implementing the storyboard synthesis models.
+- **Natural Language Processing (NLP) Libraries**: Libraries like NLTK or spaCy for text processing and analysis.
 
 ## Installation
 
-Provide step-by-step instructions on how to set up the backend locally. Include information about installing dependencies, setting up a virtual environment, and any other necessary steps.
+To set up the backend locally, follow these steps:
 
-```bash
-# Example installation steps
-git clone https://github.com/birehan/PromptlyTech-RAG-LLM-Prompt-Service.git
-cd PromptlyTech-RAG-LLM-Prompt-Service/backend
-pip install -r requirements.txt
-```
+1. Clone the repository: `git clone https://github.com/birehan/automated-storyboard-synthesis-backend.git`
+2. Navigate to the backend directory: `cd automated-storyboard-synthesis-backend`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Start the Flask server: `python app.py`
+5. The backend server will be running at `http://localhost:5000`
 
 ## Usage
 
-Explain how to run the Flask application locally or deploy it to a production server. Include any configuration settings or environment variables that need to be set.
+1. Send HTTP requests to the provided endpoints with textual descriptions of advertisement concepts and assets.
+2. Receive JSON responses containing generated storyboards or error messages.
 
-```bash
-# Example usage
-export FLASK_APP=app.py
-export FLASK_ENV=development
-flask run
-```
+## Contributors
 
-## API Endpoints
-
-List and describe the available API endpoints along with their functionalities. Include information about request and response formats.
-
-- `GET /`: Get a welcome api
-
-
-
-## Contributing
-
-Provide guidelines for contributing to the project. Include information about the development workflow, coding standards, and how to submit pull requests.
+- [Birehan Anteneh](https://github.com/birehan)
+- [Ekram Kedir](https://github.com/ekram-kedir)
 
 ## License
 
-Specify the license under which the project is distributed. For example, this project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+Special thanks to the 10 Academy Cohort A team for organizing the weekly challenge and providing guidance throughout the project.
+

@@ -1,97 +1,47 @@
-Certainly! Below is a template for a README file for a project using React with Vite. Please replace placeholder information with your actual project details.
+# Automated Storyboard Synthesis for Digital Advertising - Frontend
 
----
+## Overview
 
-# React + Vite Project
-
-This repository contains a project using React with Vite as the build tool. This combination provides a fast and efficient development environment for building modern web applications.
-
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Available Scripts](#available-scripts)
-- [Customization](#customization)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Introduction
-
-Describe the purpose and goals of your project. Include information about the technologies used and any specific features or functionalities.
+Welcome to the frontend of our cutting-edge machine learning solution developed as part of the 10 Academy Cohort A Weekly Challenge: Week 10. This frontend interface complements our backend implementation, aiming to provide users with an intuitive and efficient way to interact with our automated storyboard synthesis system.
 
 ## Features
 
-Highlight the key features of your project.
+- **User-friendly Interface**: Enjoy a sleek and easy-to-navigate interface designed for seamless user experience.
+- **Text Input**: Input textual descriptions of advertisement concepts and assets effortlessly.
+- **Customization Options**: Explore customization options to tailor the storyboard generation process according to your preferences.
 
-- **React:** A JavaScript library for building user interfaces.
-- **Vite:** A fast development build tool that supports modern JavaScript features.
+## Technologies Used
 
-## Getting Started
+- **React**: Utilized for building the frontend components and managing application state.
+- **RESTful API**: Communicates with the backend server for processing textual inputs and retrieving generated storyboards.
 
-Provide step-by-step instructions on how to set up the project locally.
+## Installation
 
-```bash
-# Example getting started steps
-git clone https://github.com/yourusername/react-vite-project.git
-cd react-vite-project
-npm install
-```
+To run the frontend locally, follow these steps:
 
-## Project Structure
+1. Clone the repository: `git clone https://github.com/birehan/automated-storyboard-synthesis-frontend.git`
+2. Navigate to the frontend directory: `cd automated-storyboard-synthesis-frontend`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Access the application in your web browser at `http://localhost:3000`
 
-Explain the organization of your project's files and directories. Mention any notable or important files.
+## Usage
 
-```plaintext
-src/            # Source code
-|-- components/ # React components
-|-- styles/     # Stylesheets
-public/         # Public assets
-|-- index.html  # HTML template
-```
+1. Input your advertisement concept and assets descriptions into the provided text input field.
+2. Explore customization options if desired.
+3. Review the generated storyboard and make any necessary adjustments.
+4. Download the storyboard and individual frames for further use.
 
-## Available Scripts
+## Contributors
 
-List and describe the available scripts for running, building, and testing the project.
-
-- **Development:**
-  ```bash
-  npm run dev
-  ```
-
-- **Production Build:**
-  ```bash
-  npm run build
-  ```
-
-- **Serve Production Build Locally:**
-  ```bash
-  npm run serve
-  ```
-
-- **Run Tests:**
-  ```bash
-  npm test
-  ```
-
-## Customization
-
-Explain how users can customize or configure the project. Include information about environment variables or configuration files.
-
-```bash
-# Example customization settings
-VITE_API_URL=https://api.example.com
-```
-
-## Contributing
-
-Provide guidelines for contributing to the project. Include information about the development workflow, coding standards, and how to submit pull requests.
+- [Birehan Anteneh](https://github.com/birehan)
+- [Ekram Kedir](https://github.com/ekram-kedir)
 
 ## License
 
-Specify the license under which the project is distributed. For example, this project is licensed under the [MIT License](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
+## Acknowledgements
 
-Feel free to adapt the README to fit the specifics of your React + Vite project.
+Special thanks to the 10 Academy Cohort A team for organizing the weekly challenge and providing guidance throughout the project.
+

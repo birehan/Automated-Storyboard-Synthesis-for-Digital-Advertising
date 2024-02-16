@@ -30,7 +30,7 @@ In response to recent advancements in machine learning, natural language process
 
 To get started with the project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/automated-storyboard-synthesis.git`
+1. Clone the repository: `git clone https://github.com/birehan/automated-storyboard-synthesis.git`
 2. Navigate to the project directory: `cd automated-storyboard-synthesis`
 3. Install dependencies: `pip install -r requirements.txt`
 4. Explore the folders and scripts to understand the project structure and functionality.
