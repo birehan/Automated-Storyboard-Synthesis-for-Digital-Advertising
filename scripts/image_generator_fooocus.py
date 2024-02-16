@@ -19,8 +19,10 @@ class ImageGenerater:
     def __init__(self, asset_suggestions: dict) -> None:
         self.asset_suggestions = asset_suggestions
 
-    def generate_images(self, store_location: str ='./images') -> dict:
+    def generate_images(self, store_location: str ='./../images') -> dict:
         generated_images = {}
+        os.makedirs(store_location, exist_ok=True)
+        
         for frame, elements in self.asset_suggestions.items():
             if frame.startswith('frame'):
                 generated_images[frame] = []
