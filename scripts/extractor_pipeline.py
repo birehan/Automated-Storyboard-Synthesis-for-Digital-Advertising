@@ -7,8 +7,6 @@ import logging
 
 from matching_detector import MatchingDetector
 
-
-
 class ExtractorPipeline():
     """
     performs feature extraction from all image files in the assets folder

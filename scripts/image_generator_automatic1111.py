@@ -11,7 +11,7 @@ import base64
 
 
 
-def generate_image_automatic(prompt: str, steps: int=5, url: str = "http://localhost:7860") -> dict:
+def generate_image_automatic(prompt: str, width:int=512, height:int=512, steps: int=5, url: str = "http://localhost:7860") -> dict:
     """
     Generates images based on a prompt using a remote service.
 
@@ -25,7 +25,9 @@ def generate_image_automatic(prompt: str, steps: int=5, url: str = "http://local
     """
     payload = {
         "prompt": prompt,
-        "steps": steps
+        "steps": steps,
+        "width": width,
+        "height":height
     }
 
     try:
