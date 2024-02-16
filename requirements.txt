@@ -13,3 +13,4 @@ torch==1.4.0
 mxnet==1.9.1
 transformers==4.37.2
 replicate==replicate
+langchain==0.1.7
