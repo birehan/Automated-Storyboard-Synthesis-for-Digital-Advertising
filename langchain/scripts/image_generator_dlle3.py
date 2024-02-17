@@ -1,11 +1,13 @@
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
-from logger import logger
+import logging
 from PIL import Image
 import requests
 from typing import  Tuple
 from io import BytesIO
+
+logging.basicConfig(level=logging.INFO)
 
 # Load environment variables from .env file
 load_dotenv()
@@ -17,7 +19,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 if not api_key:
     raise ValueError("API key is not set. Make sure it is available in your .env file.")
 
-def generate_image_dlle3(prompt: str) -> str:
+def generate_image_dlle3(prompt: str, image_name:str, save_path:str) -> str:
     """
     Generate an image using the OpenAI Images API based on the given prompt.
 
@@ -33,16 +35,23 @@ def generate_image_dlle3(prompt: str) -> str:
         response = client.images.generate(
             model="dall-e-3",
             prompt=prompt,
+            size="1024x1792",
             quality="hd",
             n=1,
         )
 
         image_url = response.data[0].url
-        logger.info("Image generated successfully")
+        
+        save_path =  download_image_dlle3(
+                url = image_url,
+                save_path=save_path, 
+                image_name=image_name)
+        
+        logging.info("Image generated successfully")
+        return save_path
 
-        return image_url
     except Exception as e:
-        logger.error(f"Error while generating image: {e}")
+        logging.error(f"Error while generating image: {e}")
         return ""
 
 
@@ -66,13 +75,13 @@ def generate_image_variation(image_src: str) -> str:
         )
 
         image_url = response.data[0].url
-        logger.info("Image variation generated successfully")
+        logging.info("Image variation generated successfully")
         return image_url
     except Exception as e:
-        logger.error(f"Error while generating image variation: {e}")
+        logging.error(f"Error while generating image variation: {e}")
         return ""
 
-def download_image_dlle3(url: str, save_path: str, image_name: str) -> Tuple[str, str]:
+def download_image_dlle3(url: str, save_path: str, image_name: str) -> str:
     """
     Downloads provided url data to given location.
 
@@ -100,8 +109,8 @@ def download_image_dlle3(url: str, save_path: str, image_name: str) -> Tuple[str
             
             image = Image.open(BytesIO(response.content))
             image.save(save_path)
-            logger.info(f"Image saved to {save_path}")
-            return (url, save_path)
+            logging.info(f"Image saved to {save_path}")
+            return save_path
         else:
             raise RuntimeError(f"Failed to download image. Status code: {response.status_code}") from None
     except Exception as e:

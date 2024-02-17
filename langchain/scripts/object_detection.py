@@ -3,7 +3,10 @@ from matplotlib import pyplot as plt
 from pathlib import Path
 import cv2
 import os
-from logger import logger
+import logging
+
+
+logging.basicConfig(level=logging.INFO)
 
 class ObjectDetection:
     def __init__(self) -> None:
@@ -12,9 +15,9 @@ class ObjectDetection:
         """
         try:
             self.net = model_zoo.get_model('yolo3_darknet53_voc', pretrained=True)
-            logger.info("Object detection model created")
+            logging.info("Object detection model created")
         except Exception as e:
-            logger.error(f"Error while creating object detection: {e}")
+            logging.error(f"Error while creating object detection: {e}")
         
         
     def detect_from_image(self, image_path: str) -> tuple:
@@ -30,10 +33,10 @@ class ObjectDetection:
         try:
             x, img = data.transforms.presets.yolo.load_test(image_path, short=512)
             class_IDs, scores, bounding_boxs = self.net(x)
-            logger.info("Object detected from image successfully")
+            logging.info("Object detected from image successfully")
             return class_IDs, scores, bounding_boxs, img
         except Exception as e:
-            logger.error(f"Error while detecting objects from image: {e}")
+            logging.error(f"Error while detecting objects from image: {e}")
             return (), (), (), None
     
     def detect_objects_and_info(self, image_path: str) -> list:
@@ -83,7 +86,7 @@ class ObjectDetection:
 
             return detected_objects
         except Exception as e:
-            logger.error(f"Error while detecting objects and info: {e}")
+            logging.error(f"Error while detecting objects and info: {e}")
             return []
     
     def detect_from_video(self, video_path: str) -> dict:
@@ -121,11 +124,11 @@ class ObjectDetection:
             cap.release()
             cv2.destroyAllWindows()
             
-            logger.info("Object detection completed on video successfully")
+            logging.info("Object detection completed on video successfully")
             return result
         
         except Exception as e:
-            logger.error(f"Error while detecting objects from video: {e}")
+            logging.error(f"Error while detecting objects from video: {e}")
             return {}
         
     def plot_detection(self, img, class_IDs, scores, bounding_boxs) -> None:
@@ -142,8 +145,8 @@ class ObjectDetection:
             utils.viz.plot_bbox(img, bounding_boxs[0], scores[0],
                                 class_IDs[0], class_names=self.net.classes)
             plt.show() 
-            logger.info("Object detection plot generated successfully")
+            logging.info("Object detection plot generated successfully")
         
         except Exception as e:
-            logger.error(f"Error while plotting object detection: {e}")
+            logging.error(f"Error while plotting object detection: {e}")
 
