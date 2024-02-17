@@ -2,7 +2,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.agents import AgentType, initialize_agent
 from langchain.schema import SystemMessage
 import logging
-from tools import generate_image
+from tools import generate_image, change_image_size, insert_text_on_image, combine_images_to_create_frame
 
 logging.basicConfig(level=logging.INFO)
 
@@ -19,7 +19,7 @@ def get_agent_executor(model_name='gpt-4-1106-preview', temperature=0):
         analyst_agent_openai = initialize_agent(
             llm=ChatOpenAI(temperature=temperature, model = model_name),
             agent=AgentType.OPENAI_FUNCTIONS,
-            tools=[generate_image],
+            tools=[generate_image, change_image_size, insert_text_on_image, combine_images_to_create_frame],
             agent_kwargs=agent_kwargs,
             verbose=True,
             max_iterations=20,
