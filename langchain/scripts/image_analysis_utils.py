@@ -244,7 +244,6 @@ def resize_image(image_path: str, target_width: int, target_height: int, output_
 
 def create_combined_image(background_path: str, elements) -> str:
     """
-
     {
     image_path :""
     start_position_x : int
@@ -281,7 +280,16 @@ def create_combined_image(background_path: str, elements) -> str:
             background.paste(resized_image, (int(offset_x), int(offset_y)), resized_image)
         
 
-        new_path = background_path.replace(".png", "combined.png")
+        new_path = background_path.replace(".png", "_combined.png")
+        directory_path = os.path.dirname(new_path)
+
+
+        # Check if the image name already exists in the save path
+        existing_files = [f for f in os.listdir(directory_path) if f.endswith("_combined.png")]
+
+        if existing_files:
+            # Append a suffix to the image name to make it unique
+            new_path =background_path.replace(".png", f"_{len(existing_files)+1}_combined.png")
 
         background.save(new_path)
 
@@ -329,9 +337,11 @@ def add_text_to_image(image_path, text, text_color=(255, 255, 255), font_path="P
         # Draw regular text
         draw.text(position, text, fill=text_color, font=font)
 
-        image.save(image_path)
-        
-        return image
+        output_path = image_path.replace(".png", "_texted.png")
+
+        image.save(output_path)
+    
+        return output_path
     
     except Exception as e:
         print(f"Error while adding text to image: {e}")

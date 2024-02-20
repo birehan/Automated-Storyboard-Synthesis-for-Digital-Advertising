@@ -23,7 +23,7 @@ you have tool called `insert_text_on_image`: Adds text to the image located at '
    - `font_size` (int): Font sizinsert_text_on_imagee (default is 24).
    - `position` (tuple): Position where the text will be placed on the image (default is top-left corner).
    - `font_weight` (str): Font weight ("normal" or "bold")
-   It returns None
+   It return the updated saved image path str.
 
 
 you have tool called `combine_images_to_create_frame`: Combines multiple images to create a single frame based on the background and elements' positioning and sizing. It takes two parameters:
